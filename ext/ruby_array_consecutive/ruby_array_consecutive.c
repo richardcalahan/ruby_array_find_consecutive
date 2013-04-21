@@ -3,8 +3,7 @@
 
 static VALUE 
 rb_arr_consecutive ( int argc, VALUE *argv, VALUE self )
-{
-    
+{    
     if ( argc > 1 ) { 
         rb_raise(rb_eArgError, "wrong number of arguments (%i for 0..1)", argc);
     } 
@@ -20,7 +19,7 @@ rb_arr_consecutive ( int argc, VALUE *argv, VALUE self )
     }
 
     VALUE r_ary = rb_ary_new();
-    VALUE c_ary = rb_ary_new();       
+    VALUE c_ary = rb_ary_new();
 
     long int max = RARRAY_LEN(self);
     double c, n;
