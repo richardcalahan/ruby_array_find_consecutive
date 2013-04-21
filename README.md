@@ -1,8 +1,8 @@
-## Ruby C extension for Array#find_consecutive
+## C extension for Ruby: Array#find_consecutive
 
 ### Description
    
-`Array#find_consecutive` is a Ruby C extension. It returns an array of non-overlapping arrays of consecutive numbers for `self` for a given interval. If no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
+`Array#find_consecutive` is a C extension for Ruby. It returns an array of non-overlapping arrays of consecutive numbers for `self` for a given interval. If no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
 
 ### Usage
 
