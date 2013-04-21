@@ -3,6 +3,7 @@
 require 'benchmark'
 require 'ruby_array_consecutive'
 
+# A pure ruby implementation of Array#consecutive
 class Array
   def r_consecutive step=1
     r_ary, c_ary = [[], []]
