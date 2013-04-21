@@ -20,6 +20,8 @@
 [1, 2, 3.5, 5, 6.5, 8, 9, 10, 11.5, 13].consecutive(1.5)
 # => [[2, 3.5, 5, 6.5, 8], [10, 11.5, 13]]
 
+```
+
 ## And...it's fast!
 
 ```
@@ -28,6 +30,8 @@ consecutive c    (integer interval)   0.460000   0.000000   0.460000 (  0.459470
 consecutive ruby (integer interval)   1.030000   0.000000   1.030000 (  1.030171)
 consecutive c    (float interval)     0.390000   0.000000   0.390000 (  0.394497)
 consecutive ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115)   
+
+```
    
 ## Installation
 
