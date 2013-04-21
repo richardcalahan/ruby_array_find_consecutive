@@ -2,7 +2,7 @@
 #include "ruby.h"
 
 static VALUE 
-rb_arr_consecutive ( int argc, VALUE *argv, VALUE self )
+rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
 {    
     if ( argc > 1 ) { 
         rb_raise(rb_eArgError, "wrong number of arguments (%i for 0..1)", argc);
@@ -53,7 +53,7 @@ rb_arr_consecutive ( int argc, VALUE *argv, VALUE self )
     return r_ary;
 }
 
-void Init_ruby_array_consecutive ( void ) 
+void Init_ruby_array_find_consecutive ( void ) 
 {
-    rb_define_method(rb_cArray, "consecutive", rb_arr_consecutive, -1);
+    rb_define_method(rb_cArray, "find_consecutive", rb_arr_find_consecutive, -1);
 }

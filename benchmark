@@ -19,7 +19,6 @@ class Array
     end    
     return r_ary
   end
-
 end
 
 array = (1..1000000).map { rand(1..100) }

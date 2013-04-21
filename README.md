@@ -1,23 +1,23 @@
-## Ruby C extension for Array#consecutive
+## Ruby C extension for Array#find_consecutive
 
 ### Description
    
-`Array#consecutive` is a Ruby C extension. It returns an array of arrays of consecutive numbers for `self` for a given interval. If no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
+`Array#find_consecutive` is a Ruby C extension. It returns an array of arrays of consecutive numbers for `self` for a given interval. If no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
 
 ### Usage
 
 ```
 
-[1, 2, 3, 4, 5].consecutive
+[1, 2, 3, 4, 5].find_consecutive
 # => [[1, 2, 3, 4, 5]]
 
-[1, 2, 3, 4, 5, 10, 4, 5, 6, 7, 8].consecutive
+[1, 2, 3, 4, 5, 10, 4, 5, 6, 7, 8].find_consecutive
 # => [[1, 2, 3, 4, 5], [4, 5, 6, 7, 8]]
 
-[1, 2, 3, 4, 6, 8, 10, 12, 14].consecutive(2)
+[1, 2, 3, 4, 6, 8, 10, 12, 14].find_consecutive(2)
 # => [[4, 6, 8, 10, 12, 14]]
 
-[1, 2, 3.5, 5, 6.5, 8, 9, 10, 11.5, 13].consecutive(1.5)
+[1, 2, 3.5, 5, 6.5, 8, 9, 10, 11.5, 13].find_consecutive(1.5)
 # => [[2, 3.5, 5, 6.5, 8], [10, 11.5, 13]]
 
 ```
@@ -29,11 +29,11 @@ The benchmark suite interates an array of length > 2,000,000 using the C extensi
 ```
 
 $ ./benchmark
-                                          user     system      total        real
-consecutive C    (integer interval)   0.460000   0.000000   0.460000 (  0.459470)
-consecutive Ruby (integer interval)   1.030000   0.000000   1.030000 (  1.030171)
-consecutive C    (float interval)     0.390000   0.000000   0.390000 (  0.394497)
-consecutive Ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115)   
+                                               user     system      total        real
+find_consecutive C    (integer interval)   0.460000   0.000000   0.460000 (  0.459470)
+find_consecutive Ruby (integer interval)   1.030000   0.000000   1.030000 (  1.030171)
+find_consecutive C    (float interval)     0.390000   0.000000   0.390000 (  0.394497)
+find_consecutive Ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115)   
 
 ```
    
@@ -41,7 +41,7 @@ consecutive Ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115
 
 Add this line to your application's Gemfile:
 
-    gem 'ruby_array_consecutive'
+    gem 'ruby_array_find_consecutive'
 
 And then execute:
 
@@ -49,4 +49,4 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install ruby_array_consecutive
+    $ gem install ruby_array_find_consecutive
