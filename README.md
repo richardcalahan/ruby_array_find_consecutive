@@ -1,10 +1,10 @@
-# Ruby C extension for method Array#consecutive
+## Ruby C extension for method Array#consecutive
 
-## Description
+### Description
    
 `Array#consecutive` is a Ruby C extension. It returns an array of arrays of consecutive numbers for `self` for a given interval. If no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
 
-## Usage
+### Usage
 
 ```
 
@@ -22,7 +22,7 @@
 
 ```
 
-## And...it's fast!
+### And...it's fast!
 
 ```
                                           user     system      total        real
@@ -33,7 +33,7 @@ consecutive ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115
 
 ```
    
-## Installation
+### Installation
 
 Add this line to your application's Gemfile:
 
