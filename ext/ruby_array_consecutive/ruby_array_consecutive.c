@@ -54,7 +54,7 @@ rb_arr_consecutive ( int argc, VALUE *argv, VALUE self )
     return r_ary;
 }
 
-void Init_consecutive ( void ) 
+void Init_ruby_array_consecutive ( void ) 
 {
     rb_define_method(rb_cArray, "consecutive", rb_arr_consecutive, -1);
 }
