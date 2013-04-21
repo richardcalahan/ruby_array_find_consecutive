@@ -1,4 +1,4 @@
-## Ruby C extension for method Array#consecutive
+## Ruby C extension for Array#consecutive
 
 ### Description
    
