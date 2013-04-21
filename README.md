@@ -2,8 +2,7 @@
 
 ## Description
    
-`Array#consecutive` is a Ruby C extension. It returns an array of arrays of  
-consecutive numbers for `self` for a given interval (defaults to 1). That's a mouthful, so perhaps an example will help.
+`Array#consecutive` is a Ruby C extension. It returns an array of arrays of consecutive numbers for `self` for a given interval. I no interval argument is provided the default is 1. That's a mouthful, so perhaps an example will help.
 
 ## Usage
 
