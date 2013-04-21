@@ -25,6 +25,8 @@
 ### And...it's fast!
 
 ```
+
+$ ./benchmark
                                           user     system      total        real
 consecutive c    (integer interval)   0.460000   0.000000   0.460000 (  0.459470)
 consecutive ruby (integer interval)   1.030000   0.000000   1.030000 (  1.030171)
