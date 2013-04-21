@@ -24,6 +24,8 @@
 
 ### And...it's fast!
 
+The benchmark suite interates an array of length > 2,000,000.
+
 ```
 
 $ ./benchmark
