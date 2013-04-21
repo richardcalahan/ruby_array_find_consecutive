@@ -28,19 +28,19 @@ array += [1, 2.5, 4, 5.5, 7, 8.5]
 array += (1..1000000).map { rand(1..100) }
 
 Benchmark.bmbm do |x|
-  x.report 'consecutive c    (integer interval)' do 
+  x.report 'consecutive C    (integer interval)' do 
     array.consecutive
   end
 
-  x.report 'consecutive ruby (integer interval)' do 
+  x.report 'consecutive Ruby (integer interval)' do 
     array.r_consecutive
   end
 
-  x.report 'consecutive c    (float interval)' do 
+  x.report 'consecutive C    (float interval)' do 
     array.consecutive(1.5)
   end
 
-  x.report 'consecutive ruby (float interval)' do 
+  x.report 'consecutive Ruby (float interval)' do 
     array.r_consecutive(1.5)
   end
 end
