@@ -7,10 +7,12 @@ Gem::Specification.new do |gem|
   gem.summary       = 'Array#consecutive implementation'
   gem.homepage      = ''
   gem.files         = `git ls-files`.split($/)
-  gem.extensions    = ['ext/ruby_array_consecutive/extconf.rb']
+  gem.extensions    = ['ext/ruby_array_find_consecutive/extconf.rb']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rake-compiler'
   gem.add_development_dependency 'rspec'
   gem.test_files  = Dir.glob "spec/**/*_spec.rb"
 end

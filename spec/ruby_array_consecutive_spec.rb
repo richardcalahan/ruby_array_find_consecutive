@@ -1,3 +1,5 @@
+$LOAD_PATH << File.expand_path('../../lib', __FILE__)
+
 require 'spec_helper'
 require 'ruby_array_find_consecutive'
 
