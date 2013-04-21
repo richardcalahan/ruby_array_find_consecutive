@@ -2,7 +2,7 @@
 
 ## Description
    
-`consecutive` is a method added to Ruby's Array class. It returns an array of arrays of consecutive numbers for `self` for a given interval (defaults to 1). Thats a mouthful, so perhaps an example will help.
+`Array#consecutive` is a Ruby C extension. It returns an array of arrays of consecutive numbers for `self` for a given interval (defaults to 1). Thats a mouthful, so perhaps an example will help.
 
 ## Usage
 
