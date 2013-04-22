@@ -43,12 +43,12 @@ Benchmark.bmbm do |x|
     array.find_consecutive
   end
 
-  x.report 'find consecutive C    (float interval)' do 
-    array.find_consecutive(1.5)
-  end
-
   x.report 'find consecutive Ruby (integer interval)' do 
     array.r_consecutive
+  end
+
+  x.report 'find consecutive C    (float interval)' do 
+    array.find_consecutive(1.5)
   end
 
   x.report 'find consecutive Ruby (float interval)' do 

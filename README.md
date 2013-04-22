@@ -42,10 +42,10 @@ The benchmark suite interates an array of length > 2,000,000 using the C extensi
 
 $ ./benchmark
                                                user     system      total        real
-find_consecutive C    (integer interval)   0.460000   0.000000   0.460000 (  0.459470)
-find_consecutive Ruby (integer interval)   1.030000   0.000000   1.030000 (  1.030171)
-find_consecutive C    (float interval)     0.390000   0.000000   0.390000 (  0.394497)
-find_consecutive Ruby (float interval)     1.500000   0.010000   1.510000 (  1.506115)   
+find consecutive C    (integer interval)   0.510000   0.000000   0.510000 (  0.507013)
+find consecutive Ruby (integer interval)   1.150000   0.000000   1.150000 (  1.155206)
+find consecutive C    (float interval)     0.520000   0.000000   0.520000 (  0.517105)
+find consecutive Ruby (float interval)     1.820000   0.010000   1.830000 (  1.826184)
 
 ```
    
