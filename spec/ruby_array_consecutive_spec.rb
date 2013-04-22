@@ -31,4 +31,14 @@ describe Array do
   it 'finds 0 arrays of consecutive integers incrementing 1' do
     [0, 1.5, 3, 4.5, 6, 3, 4.5].find_consecutive(1).length.should == 0
   end
+
+  it 'finds 3 arrays and yields each to a block when given' do
+    a = [1, 2, 3, 5, 6, 7, 8, 7, 9, 10]
+    t_res = a.find_consecutive
+    i = 0
+    a.find_consecutive do |ary|
+      t_res[i].length.should == ary.length
+      i += 1
+    end
+  end
 end
