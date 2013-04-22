@@ -1,11 +1,11 @@
 Gem::Specification.new do |gem|
   gem.name          = 'ruby_array_find_consecutive'
-  gem.version       = '0.0.1'
+  gem.version       = '0.0.2'
   gem.authors       = ['Richard Calahan']
   gem.email         = ['richard@calahan.me']
   gem.description   = 'Provides a C level extension to Ruby, Array#find_consecutive'
   gem.summary       = 'Array#find_consecutive implementation'
-  gem.homepage      = ''
+  gem.homepage      = 'https://github.com/richardcalahan/ruby_array_find_consecutive'
   gem.files         = `git ls-files`.split($/)
   gem.extensions    = ['ext/ruby_array_find_consecutive/extconf.rb']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
