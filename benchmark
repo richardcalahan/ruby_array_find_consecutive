@@ -1,7 +1,19 @@
 #!/usr/bin/env ruby
 
 require 'benchmark'
-require 'ruby_array_consecutive'
+require 'rake'
+
+# Will auto complile extension if it doesnt exist in lib dir.
+begin 
+  tries ||= 2
+  require './lib/ruby_array_find_consecutive'
+rescue LoadError
+  Rake.application.init
+  Rake.application.load_rakefile
+  Rake.application[:compile].invoke
+  retry unless (tries -= 1).zero?
+end
+
 
 # A pure ruby implementation of Array#consecutive
 class Array
@@ -23,23 +35,23 @@ end
 
 array = (1..1000000).map { rand(1..100) }
 array += [5, 6, 7, 8, 9]
-array += [1, 2.5, 4, 5.5, 7, 8.5]
+array += [1, 2.5, 4, 5.5, 7]
 array += (1..1000000).map { rand(1..100) }
 
 Benchmark.bmbm do |x|
-  x.report 'consecutive C    (integer interval)' do 
-    array.consecutive
+  x.report 'find consecutive C    (integer interval)' do 
+    array.find_consecutive
   end
 
-  x.report 'consecutive Ruby (integer interval)' do 
+  x.report 'find consecutive C    (float interval)' do 
+    array.find_consecutive(1.5)
+  end
+
+  x.report 'find consecutive Ruby (integer interval)' do 
     array.r_consecutive
   end
 
-  x.report 'consecutive C    (float interval)' do 
-    array.consecutive(1.5)
-  end
-
-  x.report 'consecutive Ruby (float interval)' do 
+  x.report 'find consecutive Ruby (float interval)' do 
     array.r_consecutive(1.5)
   end
 end
