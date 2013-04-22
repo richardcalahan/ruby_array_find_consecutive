@@ -23,7 +23,6 @@
 [1, 2, 3, 4, 7, 6, 7, 8, 9, 10].find_consecutive do |ary|
     puts ary.length
 end
-
 # => 4
 # => 5
 # => [[1, 2, 3, 4], [6, 7, 8, 9, 10]]
