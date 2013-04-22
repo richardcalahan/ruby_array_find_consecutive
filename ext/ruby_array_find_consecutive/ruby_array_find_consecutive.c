@@ -45,7 +45,10 @@ rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
             VALUE c_ary_e = TYPE(ne) == T_FLOAT ? rb_float_new(n) : INT2FIX(n);
             rb_ary_push(c_ary, c_ary_e);
         } else {
-            if ( RARRAY_LEN(c_ary) > 1 ) rb_ary_push(r_ary, c_ary);
+            if ( RARRAY_LEN(c_ary) > 1 ) {
+                rb_ary_push(r_ary, c_ary);
+                if ( rb_block_given_p() ) rb_yield(c_ary);
+            }
             c_ary = rb_ary_new();
         }
     }
