@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'ruby_array_find_consecutive'
-  gem.version       = '0.0.2'
+  gem.version       = '0.0.3'
   gem.authors       = ['Richard Calahan']
   gem.email         = ['richard@calahan.me']
   gem.description   = 'Provides a C level extension to Ruby, Array#find_consecutive'
