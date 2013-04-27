@@ -31,7 +31,7 @@ end
 
 ### And...it's fast!
 
-The benchmark suite interates an array of length > 2,000,000 using the C extension and a pure Ruby implementation.
+The benchmark suite interates an array of length > 2,000,000 testing the C extension versus a pure Ruby implementation.
 
 ```
 
