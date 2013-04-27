@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include "ruby.h"
 
-static VALUE 
-rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
+static VALUE rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
 {    
     if ( argc > 1 ) { 
         rb_raise(rb_eArgError, "wrong number of arguments (%i for 0..1)", argc);
