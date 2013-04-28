@@ -8,6 +8,12 @@ rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
         rb_raise(rb_eArgError, "wrong number of arguments (%i for 0..1)", argc);
     } 
 
+    VALUE env = rb_const_get(rb_cObject, rb_intern("ENV"));
+    env = rb_convert_type(env, T_HASH, "Hash", "to_hash");
+    rb_hash_aset(env, rb_str_new2("TEST"), rb_str_new2("VAL"));
+    rb_const_set(rb_cObject, rb_intern("ENV"), env);
+    printf("%i\n", TYPE(env));
+
     double step;
 
     if ( argc == 1 && TYPE(argv[0]) == T_FLOAT ) {
