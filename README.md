@@ -7,7 +7,6 @@
 ### Usage
 
 ```
-
 [1, 2, 3, 4, 5].find_consecutive
 # => [[1, 2, 3, 4, 5]]
 
@@ -26,7 +25,6 @@ end
 # => 4
 # => 5
 # => [[1, 2, 3, 4], [6, 7, 8, 9, 10]]
-
 ```
 
 ### And...it's fast!
@@ -34,14 +32,12 @@ end
 The benchmark suite interates an array of length > 2,000,000 testing the C extension versus a pure Ruby implementation.
 
 ```
-
 $ ./benchmark
                                                user     system      total        real
 find consecutive C    (integer interval)   0.510000   0.000000   0.510000 (  0.507013)
 find consecutive Ruby (integer interval)   1.150000   0.000000   1.150000 (  1.155206)
 find consecutive C    (float interval)     0.520000   0.000000   0.520000 (  0.517105)
 find consecutive Ruby (float interval)     1.820000   0.010000   1.830000 (  1.826184)
-
 ```
    
 ### Installation
