@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include "ruby.h"
+#include "ruby_array_find_consecutive.h"
 
 static VALUE rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
 {    
