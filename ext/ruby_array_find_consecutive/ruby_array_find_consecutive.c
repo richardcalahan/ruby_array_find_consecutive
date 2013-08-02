@@ -54,7 +54,6 @@ static VALUE rb_arr_find_consecutive ( int argc, VALUE *argv, VALUE self )
     return r_ary;
 }
 
-void Init_ruby_array_find_consecutive ( void ) 
-{
+void Init_ruby_array_find_consecutive ( void ) {
     rb_define_method(rb_cArray, "find_consecutive", rb_arr_find_consecutive, -1);
 }
