@@ -1,4 +1,4 @@
-# C extension for Ruby: Array#find_consecutive
+# Ruby: Array#find_consecutive
 [![Build Status](https://travis-ci.org/richardcalahan/ruby_array_find_consecutive.png?branch=master)](https://travis-ci.org/richardcalahan/ruby_array_find_consecutive)
 
 ## Description
